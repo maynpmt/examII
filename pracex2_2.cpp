@@ -7,10 +7,10 @@ using namespace std;
 void sort(double x[], int N){
 	for(int i = 1; i < N; i++){
 		for(int j = i; j > 0; j--){
-			if(x[j] < x[j-1]){ //swap
-				float temp = x[j];
-				x[j] = x[j-1];
-				x[j-1] = temp;
+			if(x[j] > x[j-1]){ //swap
+				double temp = x[j-1];
+				x[j-1] = x[j];
+				x[j] = temp;
 			}else{
 				break;
 			} 
@@ -31,18 +31,16 @@ int main(){
 			//cout << score[i] << '\n';
 			i++;
 	}
-	//source.close();
+	
 
 	sort(score,20);
-	for(int i=0;i<=20;i++){
-		cout << score[i] << '\n';
+
+	for(int i=0;i<20;i++){
+		
+		dest << i+1 << ':' << score[i] << '\n';
 	}
 	dest.close();
-	
-	
 
-
-	
 	return 0;
 }
 
