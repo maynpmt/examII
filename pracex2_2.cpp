@@ -40,7 +40,6 @@ int main(){
 		dest << i+1 << ':' << score[i] << '\n';
 	}
 	dest.close();
-
 	return 0;
 }
 
